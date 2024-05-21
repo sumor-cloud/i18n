@@ -132,4 +132,30 @@ describe('entry', () => {
     // match en
     expect(i18n('demo.test')).toEqual('Test')
   })
+  it('throw error for missing key', () => {
+    const i18n = getI18n('zh-TW', {
+      en: {
+        demo: {
+          hello: 'Hello',
+          welcome: 'Welcome'
+        }
+      }
+    })
+    expect(() => {
+      i18n()
+    }).toThrow('i18n key is required')
+  })
+  it('throw error for key not found', () => {
+    const i18n = getI18n('zh-TW', {
+      en: {
+        demo: {
+          hello: 'Hello',
+          welcome: 'Welcome'
+        }
+      }
+    })
+    expect(() => {
+      i18n('demo.hi')
+    }).toThrow('i18n text is not found for demo.hi')
+  })
 })
