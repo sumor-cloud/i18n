@@ -1,7 +1,7 @@
 # i18n
 
 A [Sumor Cloud](https://sumor.cloud) Tool.  
-[More Documentation](https://sumor.cloud)
+[More Documentation](https://sumor.cloud/i18n)
 
 This is a lightweight i18n library for Node.js and the browser.
 You can easily use it to manage your i18n resources.
